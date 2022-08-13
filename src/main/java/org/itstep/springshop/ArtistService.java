@@ -7,20 +7,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class JewelryService {
+public class ArtistService {
 
     @Autowired
     ShopRepository shopRepository;
 
-    public List<Jewelry> findAll(){
+    public List<Artist> findAll(){
         return shopRepository.findAll();
     }
 
-    public Optional<Jewelry> findById(Long id){
+    public Optional<Artist> findById(Long id){
         return shopRepository.findById(id);
     }
 
-    public Jewelry save(Jewelry jewelry){return shopRepository.save(jewelry);}
+    public Artist save(Artist Artist){return shopRepository.save(Artist);}
 
     public void deleteById(Long id){
         shopRepository.deleteById(id);
